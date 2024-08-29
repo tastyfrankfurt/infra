@@ -7,9 +7,6 @@ server:
     enabled: true
     replicas: 3
     apiAddr: "http://jupiter.hell.local:7443"
-    raft:
-      enabled: true
-      setNodeId: true
 injector:
   enabled: "false"
 ui:
