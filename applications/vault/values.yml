@@ -17,5 +17,4 @@ ui:
   serviceType: "LoadBalancer"
   externalPort: 7443
   serviceIPFamilyPolicy: "SingleStack"
-  serviceIPFamilies: ["IPv4"]
   
