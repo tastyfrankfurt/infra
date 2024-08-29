@@ -1,4 +1,8 @@
 server:
+  dataStorage:
+    enabled: true
+    size: 2Gi
+    mountPath: "/vault/data"
   tolerations:
   - key: "node-role.kubernetes.io/control-plane"
     operator: "Exists"
@@ -28,4 +32,4 @@ ui:
   serviceType: "LoadBalancer"
   externalPort: 7443
   serviceIPFamilyPolicy: "SingleStack"
-  
+
