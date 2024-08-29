@@ -6,7 +6,7 @@ server:
   ha:
     enabled: true
     replicas: 3
-    apiAddr: "https://jupiter.hell.local:7443"
+    apiAddr: "http://jupiter.hell.local:7443"
     raft:
       enabled: true
       setNodeId: true
