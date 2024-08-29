@@ -6,5 +6,16 @@ server:
   ha:
     enabled: true
     replicas: 3
+    apiAddr: "https://jupiter.hell.local:7443"
+    raft:
+      enabled: true
+      setNodeId: true
 injector:
   enabled: "false"
+ui:
+  enabled: true
+  serviceType: "LoadBalancer"
+  externalPort: 7443
+  serviceIPFamilyPolicy: "SingleStack"
+  serviceIPFamilies: ["IPv4"]
+  
