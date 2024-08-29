@@ -5,3 +5,29 @@ metadata:
     app.kubernetes.io/instance: vault
     app.kubernetes.io/part-of: Hashicorp
   name: vault
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  namespace: vault
+  name: hashicorp/vault
+spec:
+  interval: 5m
+  url: https://helm.releases.hashicorp.com
+apiVersion: source.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  namespace: vault
+  name: vault
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: hashicorp/vault
+      version: 1.17.2
+      sourceRef:
+        kind: HelmRepository
+        name: hashicorp/vault
+        namespace: vault
+      interval: 1m
+  values:
+    replicaCount: 2
