@@ -3,6 +3,7 @@ server:
     enabled: true
     size: 2Gi
     mountPath: "/vault/data"
+    accessMode: ReadWriteMany
   tolerations:
   - key: "node-role.kubernetes.io/control-plane"
     operator: "Exists"

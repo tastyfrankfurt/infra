@@ -6,7 +6,7 @@ spec:
   capacity:
     storage: 100Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   nfs:
     path: /rings/lucifer# Your NFS server path
     server: jupiter.hell.local
