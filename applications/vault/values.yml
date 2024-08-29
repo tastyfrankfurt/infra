@@ -1,8 +1,8 @@
-tolerations:
-- key: "node-role.kubernetes.io/control-plane"
-  operator: "Exists"
-  effect: "NoSchedule"
 server:
+  tolerations:
+  - key: "node-role.kubernetes.io/control-plane"
+    operator: "Exists"
+    effect: "NoSchedule"
   ha:
     enabled: true
     replicas: 3
