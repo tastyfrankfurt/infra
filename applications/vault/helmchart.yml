@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmChart
+metadata:
+  name: vault
+  namespace: vault
+spec:
+  interval: 5m0s
+  chart: hashicorp/vault
+  reconcileStrategy: ChartVersion
+  sourceRef:
+    kind: HelmRepository
+    name: hashicorp
+  version: '0.28.1'
