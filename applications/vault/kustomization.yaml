@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - helmrelease.yml
 - helmrepo.yml
-- vault-ns.yml
+- vaultns.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
