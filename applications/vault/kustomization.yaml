@@ -4,7 +4,6 @@ resources:
 - helmrelease.yml
 - helmrepo.yml
 - vaultns.yml
-- helmchart.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
