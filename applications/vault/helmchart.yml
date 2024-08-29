@@ -6,7 +6,7 @@ metadata:
   namespace: vault
 spec:
   interval: 5m0s
-  chart: hashicorp/vault
+  chart: vault
   reconcileStrategy: ChartVersion
   sourceRef:
     kind: HelmRepository
