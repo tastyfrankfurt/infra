@@ -7,3 +7,5 @@ resources:
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
+- name: values
+  files: values=values.yml

@@ -15,6 +15,6 @@ spec:
         namespace: sealed-secrets
       interval: 1m
   releaseName: seal-secrets
-  values:
-    tolerations:
-      - node-role.kubernetes.io/control-plane
+  valuesFrom:
+    - kind: ConfigMap
+      name: values
