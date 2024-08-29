@@ -4,6 +4,8 @@ metadata:
   namespace: vault
   name: vaultrelease
 spec:
+  driftDetection:
+    mode: enabled
   interval: 5m
   chart:
     spec:
