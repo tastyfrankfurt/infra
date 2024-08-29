@@ -9,6 +9,7 @@ spec:
   interval: 5m
   chart:
     spec:
+      reconcileStrategy: Revision
       chart: 'vault'
       version: 0.28.1
       sourceRef:
