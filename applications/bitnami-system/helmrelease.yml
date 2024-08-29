@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  namespace: sealed-secrets
+  name: sealed-secrets-release
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: 'sealed-secrets'
+      version: 2.16.1
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: sealed-secrets
+      interval: 1m
+  releaseName: seal-secrets
+  values:
+    tolerations:
+      - node-role.kubernetes.io/control-plane
