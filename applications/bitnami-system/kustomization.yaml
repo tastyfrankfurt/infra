@@ -4,6 +4,7 @@ resources:
 - helmrelease.yml
 - helmrepo.yml
 - sealedsecretns.yml
+- namingConfiguration.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
@@ -12,9 +13,3 @@ configMapGenerator:
   namespace: sealed-secrets
   files: 
   - values.yml=values.yml
-nameReference:
-- kind: ConfigMap
-  version: v1
-  fieldSpecs:
-  - path: spec/valuesFrom/name
-    kind: HelmRelease
