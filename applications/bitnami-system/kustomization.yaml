@@ -9,5 +9,6 @@ commonLabels:
   vault.kubernetes.env: "prd"
 configMapGenerator:
 - name: values
+  namespace: sealed-secrets
   files: 
-  - values=values.yml
+  - values.yml
