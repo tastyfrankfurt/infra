@@ -1,0 +1,10 @@
+tolerations:
+- key: "node-role.kubernetes.io/control-plane"
+  operator: "Exists"
+  effect: "NoSchedule"
+server:
+  ha:
+    enabled: true
+    replicas: 3
+injector:
+  enabled: false
