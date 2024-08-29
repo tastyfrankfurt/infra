@@ -14,5 +14,6 @@ spec:
         name: hashicorp
         namespace: vault
       interval: 1m
+  releaseName: vault
   values:
     replicaCount: 2
