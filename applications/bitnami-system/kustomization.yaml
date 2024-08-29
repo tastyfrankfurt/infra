@@ -11,6 +11,6 @@ configMapGenerator:
 - name: values
   namespace: sealed-secrets
   files: 
-  - values.yml=values.yml
+  - values.yaml=values.yml
 configurations:
   - kustomizeconfig.yml
