@@ -5,7 +5,7 @@ server:
     effect: "NoSchedule"
   ha:
     enabled: true
-    replicas: 3
+    replicas: 1
     apiAddr: "http://jupiter.hell.local:7443"
     raft: 
       enabled: true
