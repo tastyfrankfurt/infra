@@ -1,7 +1,7 @@
 crds:
   enabled: true
 tolerations:
-- key: "node-role.kubernetes.io=worker"
+- key: "node-role.kubernetes.io"
   operator: "Exists"
   effect: "NoSchedule"
   
