@@ -9,8 +9,6 @@ spec:
   interval: 5m
   chart:
     spec:
-      updateStrategy: 
-        type: RollingUpdate 
       reconcileStrategy: Revision
       chart: 'vault'
       version: 0.28.1
