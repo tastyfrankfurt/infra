@@ -10,5 +10,3 @@ parameters:
   share: /rings/lucifer
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
-mountOptions:
-  - nfsvers=4.2
