@@ -2,14 +2,13 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   namespace: kube-system
-  name: csi-nfs
+  name: csi-driver-nfs
 spec:
   driftDetection:
     mode: enabled
   interval: 5m
   chart:
     spec:
-      reconcileStrategy: Revision
       chart: 'csi-driver-nfs'
       version: latest
       sourceRef:
