@@ -17,7 +17,7 @@ server:
       enabled: true
       setNodeId: true
       config: |
-        cluster_name = "vault-integrated-storage"
+        cluster_name = "jupiter.hell.local"
         storage "raft" {
           path    = "/vault/data/"
         }
