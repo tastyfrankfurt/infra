@@ -4,6 +4,7 @@ server:
     size: 2Gi
     mountPath: "/vault/data"
     accessMode: ReadWriteMany
+    storageClassName: nfs-csi
   tolerations:
   - key: "node-role.kubernetes.io/control-plane"
     operator: "Exists"
