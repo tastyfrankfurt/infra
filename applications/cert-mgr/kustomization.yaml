@@ -3,12 +3,13 @@ kind: Kustomization
 resources:
 - helmrelease.yml
 - helmrepo.yml
+- cert-mgrns.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
 configMapGenerator:
 - name: cert-mgr-values
-  namespace: kube-system
+  namespace: cert-manager
   files: 
   - values.yaml=values.yml
 configurations:
