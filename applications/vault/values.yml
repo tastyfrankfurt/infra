@@ -1,9 +1,31 @@
+global:
+  enabled: true
+  tlsDisable: true
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 250m
+    limits:
+      memory: 256Mi
+      cpu: 250m
+
 server:
+  readinessProbe:
+    enabled: true
+    path: "/v1/sys/health?standbyok=true&sealedcode=204&uninitcode=204"
+  livenessProbe:
+    enabled: true
+    path: "/v1/sys/health?standbyok=true"
+    initialDelaySeconds: 60
   dataStorage:
     enabled: true
     size: 2Gi
     accessMode: ReadWriteMany
     storageClass: nfs-csi
+  auditStorage:
+    enabled: true
+  standalone:
+    enabled: false
   tolerations:
   - key: "node-role.kubernetes.io/control-plane"
     operator: "Exists"
@@ -17,13 +39,31 @@ server:
       setNodeId: true
       config: |
         cluster_name = "jupiter.hell.local"
-        storage "raft" {
-          path    = "/vault/data/"
-        }
         listener "tcp" {
           address = "[::]:8200"
           cluster_address = "[::]:8201"
           tls_disable = "true"
+        }
+        storage "raft" {
+          path = "/vault/data"
+          retry_join {
+            leader_api_addr = "https://vault-0.vault-internal:8200"
+          }
+          retry_join {
+            leader_api_addr = "https://vault-1.vault-internal:8200"
+          }
+          retry_join {
+            leader_api_addr = "https://vault-2.vault-internal:8200"
+          }
+          autopilot {
+            server_stabilization_time = "10s"
+            last_contact_threshold = "10s"
+            min_quorum = 3
+            cleanup_dead_servers = false
+            dead_server_last_contact_threshold = "10m"
+            max_trailing_logs = 1000
+            disable_upgrade_migration = false
+          }
         }
         service_registration "kubernetes" {}
 injector:
@@ -32,5 +72,4 @@ ui:
   enabled: true
   serviceType: "LoadBalancer"
   externalPort: 7443
-  serviceIPFamilyPolicy: "SingleStack"
 
