@@ -2,7 +2,6 @@ server:
   dataStorage:
     enabled: true
     size: 2Gi
-    mountPath: "/vault/data"
     accessMode: ReadWriteMany
     storageClass: nfs-csi
   tolerations:
