@@ -39,6 +39,7 @@ server:
       enabled: true
       setNodeId: true
       config: |
+        ui = true
         cluster_name = "jupiter.hell.local"
         listener "tcp" {
           address = "[::]:8200"
