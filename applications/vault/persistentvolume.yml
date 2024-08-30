@@ -6,7 +6,7 @@ provisioner: nfs.csi.k8s.io
 parameters:
   server: jupiter.hell.local
   share: /rings/lucifer
-reclaimPolicy: Delete
+reclaimPolicy: Retain
 volumeBindingMode: Immediate
 mountOptions:
   - nfsvers=4.2
