@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  namespace: vault
-  name: hashicorp
+  namespace: kube-system
+  name: csi-driver-nfs
 spec:
   interval: 5m
-  url: https://helm.releases.hashicorp.com
+  url: https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts
