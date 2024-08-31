@@ -4,4 +4,7 @@ tolerations:
 - key: "node-role.kubernetes.io"
   operator: "Exists"
   effect: "NoSchedule"
-  
+
+webhook:
+  hostNetwork: true
+  securePort: 10260
