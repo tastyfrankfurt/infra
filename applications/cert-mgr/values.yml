@@ -8,3 +8,17 @@ tolerations:
 webhook:
   hostNetwork: true
   securePort: 10260
+  tolerations:
+  - key: "node-role.kubernetes.io/worker"
+    operator: "Exists"
+    effect: "NoSchedule"
+cainjector:
+  tolerations:
+  - key: "node-role.kubernetes.io/worker"
+    operator: "Exists"
+    effect: "NoSchedule"
+startupapicheck:
+  tolerations:
+  - key: "node-role.kubernetes.io/worker"
+    operator: "Exists"
+    effect: "NoSchedule"
