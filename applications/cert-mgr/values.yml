@@ -4,6 +4,16 @@ tolerations:
 - key: "node-role.kubernetes.io/worker"
   operator: "Exists"
   effect: "NoSchedule"
+- effect: NoExecute-
+  key: node.kubernetes.io/not-ready
+  operator: Exists
+  tolerationSeconds: 300
+- effect: NoExecute-
+  key: node.kubernetes.io/unreachable
+  operator: Exists
+  tolerationSeconds: 300
+cert-manager:
+  namespace: cert-manager
 webhook:
   hostNetwork: true
   securePort: 10260
@@ -11,13 +21,40 @@ webhook:
   - key: "node-role.kubernetes.io/worker"
     operator: "Exists"
     effect: "NoSchedule"
+  - effect: NoExecute-
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute-
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
 cainjector:
   tolerations:
   - key: "node-role.kubernetes.io/worker"
     operator: "Exists"
     effect: "NoSchedule"
+  - effect: NoExecute-
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute-
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
 startupapicheck:
   tolerations:
   - key: "node-role.kubernetes.io/worker"
     operator: "Exists"
     effect: "NoSchedule"
+  - effect: NoExecute-
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute-
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+prometheus:
+  enabled: false
+
