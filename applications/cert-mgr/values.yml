@@ -3,7 +3,7 @@ crds:
 tolerations:
 - key: "node-role.kubernetes.io"
   value: "worker"
-  operator: "Exists"
+  operator: "Equal"
   effect: "NoSchedule"
 cert-manager:
   namespace: cert-manager
@@ -13,19 +13,19 @@ webhook:
   tolerations:
   - key: "node-role.kubernetes.io"
     value: "worker"
-    operator: "Exists"
+    operator: "Equal"
     effect: "NoSchedule"
 cainjector:
   tolerations:
   - key: "node-role.kubernetes.io"
     value: "worker"
-    operator: "Exists"
+    operator: "Equal"
     effect: "NoSchedule"
 startupapicheck:
   tolerations:
   - key: "node-role.kubernetes.io"
     value: "worker"
-    operator: "Exists"
+    operator: "Equal"
     effect: "NoSchedule"
 prometheus:
   enabled: false
