@@ -1,7 +1,8 @@
 crds:
   enabled: true
 tolerations:
-- key: "node-role.kubernetes.io/worker"
+- key: "node-role.kubernetes.io"
+  value: "worker"
   operator: "Exists"
   effect: "NoSchedule"
 cert-manager:
@@ -10,17 +11,20 @@ webhook:
   hostNetwork: true
   securePort: 10260
   tolerations:
-  - key: "node-role.kubernetes.io/worker"
+  - key: "node-role.kubernetes.io"
+    value: "worker"
     operator: "Exists"
     effect: "NoSchedule"
 cainjector:
   tolerations:
-  - key: "node-role.kubernetes.io/worker"
+  - key: "node-role.kubernetes.io"
+    value: "worker"
     operator: "Exists"
     effect: "NoSchedule"
 startupapicheck:
   tolerations:
-  - key: "node-role.kubernetes.io/worker"
+  - key: "node-role.kubernetes.io"
+    value: "worker"
     operator: "Exists"
     effect: "NoSchedule"
 prometheus:
