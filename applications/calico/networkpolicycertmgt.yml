@@ -11,8 +11,8 @@ spec:
   - to:
     - ipBlock:
         cidr: 10.96.0.1/32
-    - ports:
-      - port: 443
-        protocol: TCP
+  ports:
+  - protocol: TCP
+    port: 443
   policyTypes:
   - Egress
