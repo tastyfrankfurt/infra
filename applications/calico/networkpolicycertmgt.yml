@@ -4,6 +4,7 @@ metadata:
   name: allow-k8s-apiserver
   namespace: cert-manager
 spec:
+  order: 1
   podSelector:
     matchLabels:
       app: cainjector
