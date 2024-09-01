@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-k8s-apiserver
+  namespace: cert-manager
+spec:
+  podSelector:
+    matchLabels:
+      app: cainjector
+  egress:
+  - to:
+    - ipBlock:
+        cidr: 10.96.0.1/32
+  - ports:
+    - port: 443
+      protocol: TCP
+  policyTypes:
+  - Egress
