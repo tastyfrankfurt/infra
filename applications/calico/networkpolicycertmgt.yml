@@ -1,3 +1,4 @@
+---
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
@@ -23,6 +24,7 @@ spec:
           - 10.96.0.1/32
         ports:
           - 443
+---
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
