@@ -4,8 +4,8 @@ resources:
 - networkpolicy.yml
 - networkpolicycertmgt.yml
 - k8ssvcedp.yaml
-patchesStrategicMerge:
-- disablekubeproxy.yaml
+#patchesStrategicMerge:
+#- disablekubeproxy.yaml
 #commonLabels:
 #  calico.kubernetes.name: "hell"
 #  calico.kubernetes.env: "prd"
