@@ -3,6 +3,7 @@ apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
   name: deny-app-policy
+  namespace: advanced-policy-demo
 spec:
   order: 99
   namespaceSelector: kubernetes.io/metadata.name in {"advanced-policy-demo"}
