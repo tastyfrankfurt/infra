@@ -4,7 +4,7 @@ metadata:
   name: deny-app-policy
 spec:
   order: 99
-  namespaceSelector: has(projectcalico.org/name) && projectcalico.org/name not in {"kube-system", "calico-system", "tigera-system","flux-system"}
+  namespaceSelector: has(projectcalico.org/name) && projectcalico.org/name not in {"kube-system", "calico-system", "tigera-system", "flux-system", "calico-apiserver"}
   types:
   - Ingress
   - Egress
