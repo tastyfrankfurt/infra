@@ -7,7 +7,6 @@ metadata:
 spec:
   order: 99
   types:
-  - Ingress
   - Egress
   egress:
   - action: Log
@@ -24,18 +23,3 @@ spec:
       - 10.96.0.1/32
       ports:
       - 443
-  - action: Allow
-    protocol: UDP
-    destination:
-      selector: 'k8s-app == "kube-dns"'
-      ports:
-      - 53
-  - action: Allow
-    protocol: TCP
-    destination:
-      selector: 'k8s-app == "kube-dns"'
-      ports:
-      - 53
-  ingress:
-  - action: Log
-  - action: Deny
