@@ -9,14 +9,14 @@ spec:
   types:
   - Egress
   egress:
-  - action: Log
+  - action: log
     protocol: TCP
     destination:
       nets:
       - 10.96.0.1/32
       ports:
       - 443
-  - action: Allow
+  - action: allow
     protocol: TCP
     destination:
       nets:
