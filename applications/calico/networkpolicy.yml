@@ -1,0 +1,43 @@
+---
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: deny-app-policy
+spec:
+  order: 99
+  namespaceSelector: kubernetes.io/metadata.name in {"advanced-policy-demo"}
+  types:
+  - Ingress
+  - Egress
+  egress:
+  - action: Log
+    protocol: TCP
+    destination:
+      nets:
+      - 10.96.0.1/32
+      ports:
+      - 443
+  - action: Allow
+    protocol: TCP
+    destination:
+      nets:
+      - 10.96.0.1/32
+      ports:
+      - 443
+  - action: Allow
+    protocol: UDP
+    destination:
+      selector: 'k8s-app == "kube-dns"'
+      ports:
+      - 53
+  - action: Allow
+    protocol: TCP
+    destination:
+      selector: 'k8s-app == "kube-dns"'
+      ports:
+      - 53
+  - action: Log
+  - action: Deny
+  ingress:
+  - action: Log
+  - action: Deny
