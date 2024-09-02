@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - networkpolicy.yml
 - networkpolicycertmgt.yml
+- k8ssvcedp.yaml
 #commonLabels:
 #  calico.kubernetes.name: "hell"
 #  calico.kubernetes.env: "prd"
