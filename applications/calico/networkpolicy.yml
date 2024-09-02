@@ -1,3 +1,4 @@
+---
 apiVersion: projectcalico.org/v3
 kind: GlobalNetworkPolicy
 metadata:
@@ -21,5 +22,32 @@ spec:
       selector: 'k8s-app == "kube-dns"'
       ports:
       - 53
+  - action: Log
+  - action: Deny
+---
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: allow-access-cluster-api
+spec:
+  order: 90
+  namespaceSelector: has(projectcalico.org/name) && projectcalico.org/name not in {"kube-system", "calico-system", "tigera-system", "flux-system", "calico-apiserver"}
+  types:
+  - Egress
+  egress:
+  - action: Log
+    protocol: TCP
+    destination:
+      nets:
+      - 10.96.0.1/32
+      ports:
+      - 443
+  - action: Allow
+    protocol: TCP
+    destination:
+      nets:
+      - 10.96.0.1/32
+      ports:
+      - 443
   - action: Log
   - action: Deny
