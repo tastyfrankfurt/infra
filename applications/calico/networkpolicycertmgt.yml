@@ -26,7 +26,7 @@ spec:
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
-  name: allow-k8s-apiserver
+  name: allow-k8s-apiserver2
   namespace: advanced-policy-demo
 spec:
   order: 1
