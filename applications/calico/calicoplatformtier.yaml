@@ -6,11 +6,11 @@ metadata:
 spec:
   order: 1
   types:
-    - Ingress
-    - Egress
+  - Ingress
+  - Egress
   ingress:
-    - action: Log
-    - action: Allow
-    ingress:
-    - action: Log
-    - action: Allow
+  - action: Log
+  - action: Allow
+  egress:
+  - action: Log
+  - action: Allow
