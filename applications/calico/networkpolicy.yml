@@ -16,4 +16,4 @@ spec:
       ports:
       - 443
   - action: Log
-  - action: Den
+  - action: Deny
