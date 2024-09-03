@@ -15,8 +15,9 @@ spec:
   egress:
   - action: Allow
     protocol: TCP
-    nets:
-    - 10.96.0.0/24
+    destination:
+      nets:
+      - 10.96.0.0/24
     ports:
     - 443
   - action: Log
