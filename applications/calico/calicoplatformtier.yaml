@@ -10,7 +10,19 @@ spec:
   - Egress
   ingress:
   - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
   - action: Allow
   egress:
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
+  - action: Log
   - action: Log
   - action: Allow
