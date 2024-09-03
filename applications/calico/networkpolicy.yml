@@ -11,7 +11,7 @@ spec:
   - action: Allow
     protocol: TCP
     source:
-      selector: service == 'access'
+      selector: run == 'access'
     destination:
       ports:
       - 443
