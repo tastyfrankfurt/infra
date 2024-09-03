@@ -5,6 +5,7 @@ resources:
 - networkpolicycertmgt.yml
 - k8ssvcedp.yaml
 - calicotier.yaml
+- calicoplatformtier.yaml
 #patchesStrategicMerge:
 #- disablekubeproxy.yaml
 #commonLabels:
