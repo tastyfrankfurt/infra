@@ -1,0 +1,17 @@
+---
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: rulediscovery
+spec:
+  tier: platform
+  order: 1
+  types:
+    - Ingress
+    - Egress
+  ingress:
+    - action: Log
+    - action: Allow
+    ingress:
+    - action: Log
+    - action: Allow
