@@ -4,7 +4,6 @@ kind: GlobalNetworkPolicy
 metadata:
   name: rulediscovery
 spec:
-  tier: platform
   order: 1
   types:
     - Ingress
