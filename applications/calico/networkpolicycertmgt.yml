@@ -1,0 +1,17 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: apiaccess-demo
+spec:
+  types:
+  - Egress
+  selector: run == 'access'
+  egress:
+  - action: Allow
+    protocol: TCP
+    source:
+      selector: run == 'access'
+    destination:
+      ports:
+      - 443
+  - action: Log
