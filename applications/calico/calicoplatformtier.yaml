@@ -11,19 +11,13 @@ spec:
   - Egress
   ingress:
   - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
   - action: Allow
   egress:
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
-  - action: Log
+  - action: Allow
+    protocol: TCP
+    nets:
+    - 10.96.0.0/24
+    ports:
+    - 443
   - action: Log
   - action: Allow
