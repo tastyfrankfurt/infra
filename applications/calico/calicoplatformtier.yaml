@@ -20,4 +20,5 @@ spec:
     ports:
     - 443
   - action: Log
+  - action: Log
   - action: Allow
