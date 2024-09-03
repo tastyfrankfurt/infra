@@ -5,14 +5,15 @@ metadata:
   name: allow-busybox-egress
   namespace: advanced-policy-demo
 spec:
-  selector: run == 'access'
   types:
   - Egress
   egress:
   - action: Allow
     protocol: TCP
+    source:
+      selector: service == 'access'
     destination:
       ports:
       - 443
   - action: Log
-  - action: Deny
+  - action: Den
