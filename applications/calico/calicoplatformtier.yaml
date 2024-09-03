@@ -4,6 +4,8 @@ kind: GlobalNetworkPolicy
 metadata:
   name: rulediscovery
 spec:
+  selector: all()
+  namespaceselector: all()
   order: 1
   types:
   - Ingress
