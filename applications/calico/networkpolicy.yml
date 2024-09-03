@@ -2,15 +2,17 @@
 apiVersion: projectcalico.org/v3
 kind: NetworkPolicy
 metadata:
-  name: deny-app-policy
+  name: allow-busybox-egress
   namespace: advanced-policy-demo
 spec:
-  order: 1
+  selector: run == 'access'
   types:
   - Egress
   egress:
-  - action: Log
   - action: Allow
-  ingress:
+    protocol: TCP
+    destination:
+      ports:
+      - 443
   - action: Log
-  - action: Allow
+  - action: Deny
