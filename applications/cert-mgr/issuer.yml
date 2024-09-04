@@ -38,7 +38,7 @@ metadata:
 spec:
   vault:
     path: pki_int/sign/vault
-    server: http://vault-active.vault.svc.cluster.local/
+    server: http://jupiter.hell.local:7443/
     auth:
       kubernetes:
         role: vault-issuer
