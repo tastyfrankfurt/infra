@@ -5,6 +5,7 @@ resources:
 - helmrepo.yml
 - vaultns.yml
 - persistentvolume.yml
+- ingress.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
