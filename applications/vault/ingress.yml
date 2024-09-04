@@ -3,12 +3,12 @@ kind: Ingress
 metadata:
   name: vault
   namespace: vault
-  annotations:
-    cert-manager.io/issuer: "vault-issuer"
-    cert-manager.io/common-name: "vault"
-    cert-manager.io/private-key-algorithm: "ECDSA"
-    cert-manager.io/private-key-size: "521"
-    cert-manager.io/duration: "9d"
+  #annotations:
+  #  cert-manager.io/issuer: "vault-issuer"
+  #  cert-manager.io/common-name: "vault"
+  #  cert-manager.io/private-key-algorithm: "ECDSA"
+  #  cert-manager.io/private-key-size: "521"
+  #  cert-manager.io/duration: "9d"
 spec:
   ingressClassName: nginx
   tls:
