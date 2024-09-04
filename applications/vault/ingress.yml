@@ -8,7 +8,7 @@ metadata:
     cert-manager.io/common-name: "vault"
     cert-manager.io/private-key-algorithm: "ECDSA"
     cert-manager.io/private-key-size: "521"
-    cert-manager.io/duration: "29d"
+    cert-manager.io/duration: "10d"
 spec:
   ingressClassName: nginx
   tls:
