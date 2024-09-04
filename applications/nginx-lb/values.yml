@@ -1,13 +1,13 @@
 ---
 controller:
   tolerations:
-  - key: "node-role.kubernetes.io"
-    value: worker
-    operator: Exists
-    effect: NoSchedule
+    - key: "node-role.kubernetes.io"
+      value: worker
+      operator: Exists
+      effect: NoSchedule
 defaultBackend:
   tolerations:
-  - key: "node-role.kubernetes.io"
-    value: worker
-    operator: Exists
-    effect: NoSchedule
+    - key: "node-role.kubernetes.io"
+      value: worker
+      operator: Exists
+      effect: NoSchedule
