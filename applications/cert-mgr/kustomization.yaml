@@ -4,6 +4,7 @@ resources:
 - helmrelease.yml
 - helmrepo.yml
 - cert-mgrns.yml
+- issuer.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
