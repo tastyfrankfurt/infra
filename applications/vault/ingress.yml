@@ -21,4 +21,4 @@ spec:
           service:
             name: vault-ui
             port:
-              number: 7445
+              number: 7443
