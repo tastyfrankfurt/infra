@@ -23,7 +23,7 @@ metadata:
   namespace: vault
 subjects:
   - kind: ServiceAccount
-    name: cert-manager
+    name: vault-issuer
     namespace: vault
 roleRef:
   apiGroup: rbac.authorization.k8s.io
