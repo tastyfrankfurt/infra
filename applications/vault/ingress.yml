@@ -5,7 +5,7 @@ metadata:
   namespace: vault
   annotations:
     cert-manager.io/issuer: "vault-issuer"
-    cert-manager.io/common-name: "Vault"
+    cert-manager.io/common-name: "vault"
     cert-manager.io/private-key-algorithm: "ECDSA"
     cert-manager.io/private-key-size: "521"
 spec:
