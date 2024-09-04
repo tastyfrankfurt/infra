@@ -26,4 +26,3 @@ spec:
             name: vault-ui
             port:
               number: 7443
-              
