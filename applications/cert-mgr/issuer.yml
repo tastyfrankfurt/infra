@@ -7,7 +7,7 @@ metadata:
 rules:
   - apiGroups: ['']
     resources: ['serviceaccounts/token']
-    resourceNames: ['vault-issuer']
+    resourceNames: ['cert-manager']
     verbs: ['create']
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -39,4 +39,3 @@ spec:
         mountPath: /v1/auth/kubernetes
         serviceAccountRef:
           name: cert-manager
-          
