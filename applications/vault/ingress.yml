@@ -5,6 +5,7 @@ metadata:
   namespace: vault
   annotations:
     cert-manager.io/issuer: "vault-issuer"
+    cert-manager.io/common-name: "Vault Instance for Ingress"
 spec:
   ingressClassName: nginx
   tls:
