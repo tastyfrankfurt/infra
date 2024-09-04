@@ -28,7 +28,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: vault-issuer
-  namespace: vault
+  namespace: cert-manager
 spec:
   vault:
     path: pki_int/sign/vault
@@ -38,4 +38,4 @@ spec:
         role: vault-issuer
         mountPath: /v1/auth/kubernetes
         serviceAccountRef:
-          name: vault-issuer
+          name: cert-manager
