@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  namespace: cert-manager
-  name: cert-manager
+  namespace: ingress-nginx
+  name: ingress-nginx
 spec:
   interval: 5m
-  url: https://charts.jetstack.io
+  url: https://kubernetes.github.io/ingress-nginx
