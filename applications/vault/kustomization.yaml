@@ -6,7 +6,7 @@ resources:
 - vaultns.yml
 - persistentvolume.yml
 - ingress.yml
-- cabundle.yml
+#- cabundle.yml
 commonLabels:
   vault.kubernetes.name: "hell"
   vault.kubernetes.env: "prd"
