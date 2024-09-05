@@ -11,7 +11,7 @@ webhooks:
   - v1
   clientConfig:
     service:
-      name: vault-active
+      name: vault
       namespace: vault
       path: /ui/
       port: 8200
