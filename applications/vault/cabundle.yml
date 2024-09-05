@@ -8,4 +8,4 @@ data:
   tls.key: ""
 metadata:
   name: vault-ca
-  namespace: vault
+  namespace: vault 
