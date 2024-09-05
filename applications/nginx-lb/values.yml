@@ -1,7 +1,7 @@
 controller:
   admissionWebhooks:
     annotations:
-      certmanager.k8s.io/inject-ca-from-secret: vault/vault-ca
+      cert-manager.io/inject-ca-from-secret: vault/vault-ca
     patch:
       tolerations:
         - key: "node-role.kubernetes.io"
