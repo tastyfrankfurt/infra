@@ -23,8 +23,8 @@ server:
     activeService: true
     hosts:
     - host: jupiter.hell.local
-      - paths: 
-        - /
+      paths: 
+      - /
     tls:
     - hosts:
       - jupiter.hell.local
