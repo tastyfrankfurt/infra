@@ -56,7 +56,6 @@ metadata:
   namespace: vault
 spec:
   acme:
-    path: 
     server: https://jupiter.hell.local:8443/pki_int/acme/directory
     privateKeySecretRef:
       name: vault-acme-key
