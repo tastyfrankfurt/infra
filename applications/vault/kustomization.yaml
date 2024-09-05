@@ -5,7 +5,7 @@ resources:
 - helmrepo.yml
 - vaultns.yml
 - persistentvolume.yml
-- ingress.yml
+#- ingress.yml
 #- cabundle.yml
 commonLabels:
   vault.kubernetes.name: "hell"
