@@ -1,5 +1,5 @@
 controller:
-extraArgs:
+  extraArgs:
     default-ssl-certificate: vault/vault-ca
   admissionWebhooks:
     annotations:
