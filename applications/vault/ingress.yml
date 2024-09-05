@@ -13,7 +13,7 @@ webhooks:
     service:
       name: vault-active
       namespace: vault
-      path: /
+      path: /ui/
       port: 8200
   sideEffects: None
 ---
