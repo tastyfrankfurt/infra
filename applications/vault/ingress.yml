@@ -23,6 +23,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: vault-ui
+            name: vault-active
             port:
-              number: 7443
+              number: 8200
