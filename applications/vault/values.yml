@@ -10,6 +10,25 @@ global:
       cpu: 250m
 
 server:
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/issuer: "vault-issuer"
+      cert-manager.io/common-name: "vault"
+      cert-manager.io/private-key-algorithm: "ECDSA"
+      cert-manager.io/private-key-size: "521"
+      cert-manager.io/duration: "216h"
+    ingressClassName: nginx
+    pathType: Prefix
+    activeService: true
+    hosts:
+    - host: jupiter.hell.local
+      - paths: 
+        - /
+    tls:
+    - hosts:
+      - jupiter.hell.local
+      secretName: vault-tls
   updateStrategyType: OnDelete
   readinessProbe:
     enabled: true
