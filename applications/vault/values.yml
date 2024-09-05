@@ -18,7 +18,7 @@ server:
       cert-manager.io/private-key-algorithm: "ECDSA"
       cert-manager.io/private-key-size: "521"
       cert-manager.io/duration: "216h"
-      cert-manager.io/inject-ca-from-secret: vault/vault-ca
+      cert-manager.io/inject-ca-from-secret: vault/vault-tls
     ingressClassName: nginx
     pathType: Prefix
     activeService: true
