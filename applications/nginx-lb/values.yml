@@ -1,4 +1,6 @@
 controller:
+extraArgs:
+    default-ssl-certificate: vault/vault-ca
   admissionWebhooks:
     annotations:
       cert-manager.io/inject-ca-from-secret: vault/vault-ca
