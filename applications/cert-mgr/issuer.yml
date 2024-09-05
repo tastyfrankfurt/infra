@@ -48,3 +48,15 @@ spec:
         mountPath: /v1/auth/kubernetes
         serviceAccountRef:
           name: vault-issuer-sa
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: vault-acme
+  namespace: vault
+spec:
+  acme:
+    path: 
+    server: https://jupiter.hell.local:8443/pki_int/acme/directory
+    privateKeySecretRef:
+      name: vault-acme-key
