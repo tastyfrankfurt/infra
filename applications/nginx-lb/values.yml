@@ -1,4 +1,11 @@
 controller:
+  admissionWebhooks:
+    patch:
+      tolerations:
+        - key: "node-role.kubernetes.io"
+          value: worker
+          operator: Exists
+          effect: NoSchedule
   tolerations:
     - key: "node-role.kubernetes.io"
       value: worker
