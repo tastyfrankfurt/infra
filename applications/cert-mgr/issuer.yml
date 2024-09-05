@@ -57,5 +57,8 @@ metadata:
 spec:
   acme:
     server: https://jupiter.hell.local:8443/pki_int/acme/directory
+    caBundleSecretRef:
+      key: ca.crt
+      name: vault-tls
     privateKeySecretRef:
       name: vault-acme-key
