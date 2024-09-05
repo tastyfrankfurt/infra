@@ -46,4 +46,4 @@ spec:
         role: vault-issuer-role
         mountPath: /v1/auth/kubernetes
         serviceAccountRef:
-          name: vault-issuer-sa
+          name: vault-issuer-sa 
