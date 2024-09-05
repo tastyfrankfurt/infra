@@ -1,9 +1,9 @@
 controller:
-  extraArgs:
-    default-ssl-certificate: vault/vault-ca
+  #extraArgs:
+  #  default-ssl-certificate: vault/vault-ca
   admissionWebhooks:
     annotations:
-      cert-manager.io/inject-ca-from-secret: vault/vault-ca
+      cert-manager.io/inject-ca-from-secret: vault/vault-tls
     patch:
       tolerations:
         - key: "node-role.kubernetes.io"

@@ -4,7 +4,7 @@ kind: ValidatingWebhookConfiguration
 metadata:
   name: vault
   annotations:
-    cert-manager.io/inject-ca-from-secret: vault/vault-ca
+    cert-manager.io/inject-ca-from-secret: vault/vault-tls
 webhooks:
 - name: jupiter.hell.local
   admissionReviewVersions:
