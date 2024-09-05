@@ -2,7 +2,6 @@ controller:
   admissionWebhooks:
     annotations:
       - certmanager.k8s.io/inject-ca-from: vault/vault-ca
-    # ignore-check.kube-linter.io/no-read-only-rootfs: "This deployment needs write access to root filesystem".
     patch:
       tolerations:
         - key: "node-role.kubernetes.io"
