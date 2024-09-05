@@ -39,9 +39,6 @@ spec:
   vault:
     path: pki_int/sign/vault
     server: http://jupiter.hell.local:7443/
-    caBundleSecretRef:
-      name: vault-ca
-      key: ca.crt
     auth:
       kubernetes:
         role: vault-issuer-role
