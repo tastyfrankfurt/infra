@@ -41,7 +41,7 @@ spec:
     server: https://jupiter.hell.local:8443/
     caBundleSecretRef:
       key: ca.crt
-      name: vault-ca
+      name: vault-tls
     auth:
       kubernetes:
         role: vault-issuer-role
