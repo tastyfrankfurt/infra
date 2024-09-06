@@ -54,8 +54,6 @@ kind: Issuer
 metadata:
   name: vault-acme
   namespace: vault
-  annotations:
-    cert-manager.io/inject-ca-from-secret: vault/vault-tls
 spec:
   acme:
     server: http://vault.vault.svc.cluster.local/v1/pki_int/acme/directory
