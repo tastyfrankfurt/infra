@@ -26,9 +26,9 @@ spec:
               version: v1
               kind: Deployment
               name: metrics-metrics-server
-            patch: |
+            patch: |-
               - op: add
-                path: "spec.template.spec.containers.0.args"
+                path: "spec/template/spec/containers/0/args"
                 value: "--kubelet-insecure-tls"
 
         
