@@ -14,3 +14,10 @@ spec:
     - http01:
         ingress:
           ingressClassName: nginx
+          podTemplate:
+              spec:
+                tolerations:
+                - effect: NoSchedule
+                  key: node-role.kubernetes.io
+                  operator: Equal
+                  value: worker
