@@ -1,0 +1,8 @@
+
+tolerations:
+  - key: "node-role.kubernetes.io"
+    value: worker
+    operator: Equal
+    effect: NoSchedule
+apiService:
+  insecureSkipTLSVerify: true
