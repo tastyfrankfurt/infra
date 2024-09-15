@@ -29,7 +29,7 @@ spec:
             patch: |-
               - op: add
                 value: "--kubelet-insecure-tls"
-                path: "spec/template/spec/containers/0/args"
+                path: "/spec/template/spec/containers/0/args"
                 
 
         
