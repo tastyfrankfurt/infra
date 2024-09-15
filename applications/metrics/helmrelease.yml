@@ -19,17 +19,17 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: metrics-values
-  postRenderers:
-    - kustomize:
-        patchesStrategicMerge:
-          - kind: Deployment
-            apiVersion: apps/v1
-            metadata:
-              name: metrics-metrics-server
-            spec:
-              template:
-                spec:
-                  containers:
-                    - name: metrics-server
-                      args:
-                        - --kubelet-insecure-tls
+  postRenderers: []
+    #- kustomize:
+    #    patchesStrategicMerge:
+    #      - kind: Deployment
+    #        apiVersion: apps/v1
+    #        metadata:
+    #          name: metrics-metrics-server
+    #        spec:
+    #          template:
+    #            spec:
+    #              containers:
+    #                - name: metrics-server
+    #                  args:
+    #                    - --kubelet-insecure-tls
