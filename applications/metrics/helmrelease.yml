@@ -21,15 +21,15 @@ spec:
       name: metrics-values
   postRenderers:
     - kustomize:
-      patchesStrategicMerge:
-      - kind: Deployment
-        apiVersion: apps/v1
-        metadata:
-          name: metrics-metrics-server
-        spec:
-          template:
+        patchesStrategicMerge:
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: metrics-metrics-server
             spec:
-              containers:
-              - name: metrics-server
-                args:
-                - --kubelet-insecure-tls
+              template:
+                spec:
+                  containers:
+                    - name: metrics-server
+                      args:
+                      - --kubelet-insecure-tls
