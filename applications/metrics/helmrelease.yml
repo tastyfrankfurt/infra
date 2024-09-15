@@ -19,10 +19,18 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: metrics-values
-  postRenderers: []
-    #- kustomize:
-    #    patchesStrategicMerge:
-    #      - kind: Deployment
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              version: v1
+              kind: Deployment
+              name: metrics-metrics-server
+            patch: |
+              - op: add
+                path: spec.tempalte.spec.containers["metrics-server"].args
+                value: --kubelet-insecure-tls
+    #      - kind: Deploymenmetrics-metrics-servert
     #        apiVersion: apps/v1
     #        metadata:
     #          name: metrics-metrics-server
