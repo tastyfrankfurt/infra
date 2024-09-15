@@ -24,7 +24,7 @@ metadata:
   namespace: metrics
   annotations:
     cert-manager.io/issuer: "vault-acme"
-    cert-manager.io/common-name: "metrics"
+    cert-manager.io/common-name: "metrics.hell.local"
     cert-manager.io/private-key-algorithm: "ECDSA"
     cert-manager.io/private-key-size: "521"
     cert-manager.io/duration: "216h"
