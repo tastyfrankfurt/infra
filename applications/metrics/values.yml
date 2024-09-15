@@ -4,3 +4,5 @@ tolerations:
     value: worker
     operator: Equal
     effect: NoSchedule
+apiService:
+  insecureSkipTLSVerify: true
