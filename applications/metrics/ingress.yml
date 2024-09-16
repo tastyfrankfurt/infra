@@ -45,4 +45,4 @@ spec:
           service:
             name: metrics-metrics-server
             port:
-              number: 10250
+              number: 443
