@@ -28,7 +28,6 @@ metadata:
     cert-manager.io/private-key-algorithm: "ECDSA"
     cert-manager.io/private-key-size: "521"
     cert-manager.io/duration: "216h"
-    nginx.org/ssl-services: "metrics-metrics-server"
 spec:
   ingressClassName: nginx
   tls:
