@@ -21,3 +21,14 @@ spec:
   valuesFrom:
     - kind: ConfigMap
       name: values
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              version: v1
+              kind: StatefulSet
+              name: vault
+            patch: |-
+              - op: replace
+                value: "hashicorp/vault:1.17.2 # {"$imagepolicy": "flux-system:podinfo"}"
+                path: "/spec/template/spec/containers/0/image"
