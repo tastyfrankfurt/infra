@@ -30,5 +30,5 @@ spec:
               name: vault
             patch: |-
               - op: replace
-                value: "hashicorp/vault:1.17.2 # {"$imagepolicy": "flux-system:podinfo"}"
+                value: "hashicorp/vault:1.17.2"
                 path: "/spec/template/spec/containers/0/image"
