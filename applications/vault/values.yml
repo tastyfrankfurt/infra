@@ -11,8 +11,8 @@ global:
 
 server:
   image:
-    repository: "hashicorp/vault" # {"$imagepolicy": "flux-system:vault:name"}
-    tag: "1.17.2" # {"$imagepolicy": "flux-system:vault:tag"}
+    repository: "hashicorp/vault" # {"$imagepolicy": "flux-system:vaultdeploy:name"}
+    tag: "1.17.2" # {"$imagepolicy": "flux-system:vaultdeploy:tag"}
   ingress:
     enabled: true
     annotations:
