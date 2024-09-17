@@ -12,6 +12,7 @@ spec:
     - "^1\\.[2-9]\\.\\d*$"
     - "^1\\.[2-9]$"
     - "^1\\.[2-9]\\.\\d*-rc[0-9]$"
+    - "^1\\.[2-9]\\.\\d*-rc$"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
