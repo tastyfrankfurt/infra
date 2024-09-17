@@ -2,7 +2,7 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
-  name: chainguardvault
+  name: dockervault
   namespace: flux-system
 spec:
   image: hashicorp/vault
@@ -18,7 +18,7 @@ metadata:
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: chainguardvault
+    name: dockervault
   policy:
     semver:
       range: 1.17.x
