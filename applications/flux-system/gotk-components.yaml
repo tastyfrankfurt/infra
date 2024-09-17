@@ -13464,6 +13464,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: image-reflector-controller
       terminationGracePeriodSeconds: 10
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: temp
@@ -14313,6 +14316,9 @@ spec:
         fsGroup: 1337
       serviceAccountName: image-automation-controller
       terminationGracePeriodSeconds: 10
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Exists
       volumes:
       - emptyDir: {}
         name: temp
