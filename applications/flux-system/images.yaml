@@ -5,10 +5,10 @@ metadata:
   name: chainguardvault
   namespace: flux-system
 spec:
-  image: cgr.dev/chainguard/vault
+  image: hashicorp/vault
   interval: 5m0s
   exclusionList:
-    - "^.*\\.(sbom|att|sig)$"
+    - "^.*\\.(sig)$"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
