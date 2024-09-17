@@ -48,5 +48,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./infra/vault
+    path: ./vault
     strategy: Setters
