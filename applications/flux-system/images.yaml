@@ -9,7 +9,7 @@ spec:
   interval: 5m0s
   exclusionList:
     - "^.*\\.(sig)$"
-    - "1\\.[2-9]\\.\d*$"
+    - "1\\.[2-9]\\.\\d*$"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
