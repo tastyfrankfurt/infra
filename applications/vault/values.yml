@@ -10,9 +10,6 @@ global:
       cpu: 250m
 
 server:
-  image:
-    repository: "cgr.dev/chainguard/vault"
-    tag: "latest"
   ingress:
     enabled: true
     annotations:
