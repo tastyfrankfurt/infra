@@ -7,6 +7,10 @@ metadata:
 spec:
   image: cgr.dev/chainguard/vault
   interval: 5m0s
+  exclusionList:
+    - "^.*\\.sig$"
+    - "^.*\\.att$"
+    - "^.*\\.sbom$"
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
