@@ -8,11 +8,10 @@ global:
     limits:
       memory: 256Mi
       cpu: 250m
-
 server:
   image:
     repository: "hashicorp/vault" # {"$imagepolicy": "flux-system:vaultdeploy:name"}
-    tag: "1.17.2" # {"$imagepolicy": "flux-system:vaultdeploy:tag"}
+    tag: "1.17.5" # {"$imagepolicy": "flux-system:vaultdeploy:tag"}
   ingress:
     enabled: true
     annotations:
@@ -27,7 +26,7 @@ server:
     activeService: true
     hosts:
     - host: jupiter.hell.local
-      paths: 
+      paths:
       - /
     tls:
     - hosts:
@@ -58,7 +57,7 @@ server:
     enabled: true
     replicas: 3
     apiAddr: "http://jupiter.hell.local"
-    raft: 
+    raft:
       enabled: true
       setNodeId: true
       config: |
