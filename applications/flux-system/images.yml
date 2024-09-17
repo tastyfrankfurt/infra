@@ -7,3 +7,15 @@ metadata:
 spec:
   image: cgr.dev/chainguard/vault
   interval: 5m0s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: vaultdeploy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: chainguardvault
+  policy:
+    semver:
+      range: 1.17.x
