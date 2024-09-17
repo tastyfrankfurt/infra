@@ -1,5 +1,15 @@
+---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: chainguardvault
+  namespace: flux-system
+spec:
+  image: cgr.dev/chainguard/vault
+  interval: 5m0s
