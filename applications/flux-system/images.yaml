@@ -48,5 +48,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./vault
+    path: ./
     strategy: Setters
