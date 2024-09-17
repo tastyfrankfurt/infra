@@ -10,6 +10,9 @@ global:
       cpu: 250m
 
 server:
+  image:
+    repository: "hashicorp/vault" # {"$imagepolicy": "flux-system:vault:name"}
+    tag: "1.17.2" # {"$imagepolicy": "flux-system:vault:tag"}
   ingress:
     enabled: true
     annotations:
