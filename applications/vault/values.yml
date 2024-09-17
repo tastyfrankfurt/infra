@@ -33,7 +33,7 @@ server:
     - hosts:
       - jupiter.hell.local
       secretName: vault-tls
-  updateStrategyType: OnDelete
+  updateStrategyType: RollingUpdate
   readinessProbe:
     enabled: true
     path: "/v1/sys/health?standbyok=true&sealedcode=204&uninitcode=204"
