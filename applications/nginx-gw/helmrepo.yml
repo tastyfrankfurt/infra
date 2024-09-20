@@ -1,0 +1,9 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  namespace: nginx-gw
+  name: nginx-gw
+spec:
+  type: oci
+  interval: 5m
+  url: oci://ghcr.io/nginxinc/charts/nginx-gateway-fabric
