@@ -9,7 +9,7 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: 'ingress-nginx'
+      chart: 'nginx-gw'
       sourceRef:
         kind: HelmRepository
         name: nginx-gw
