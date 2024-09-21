@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: nginxgw-crds
-  path: "./kustomize"
+  path: "./config/crd"
   prune: true
   timeout: 1m
 ---
@@ -21,6 +21,6 @@ metadata:
   namespace: nginx-gw
 spec:
   interval: 5m
-  url: https://github.com/nginxinc/nginx-gateway-fabric/tree/main/config/crd
+  url: https://github.com/nginxinc/nginx-gateway-fabric
   ref:
     tag: v1.4.0
