@@ -16,6 +16,7 @@ spec:
         name: nginx-gw
         namespace: nginx-gw
       interval: 1m
+  releaseName: "ngf"
   valuesFrom:
     - kind: ConfigMap
       name: nginx-gwvalues
