@@ -4,7 +4,6 @@ metadata:
   namespace: nginx-gw
   name: nginx-gw
 spec:
-  type: oci
   interval: 5m
   url: oci://ghcr.io/nginxinc/charts/nginx-gateway-fabric
   ref:
