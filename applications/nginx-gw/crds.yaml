@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: nginxgw-crds
-  path: "./config/crd"
+  path: "./config/crd/gateway-api/standard"
   prune: true
   timeout: 1m
 ---
