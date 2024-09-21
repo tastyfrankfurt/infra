@@ -7,16 +7,10 @@ spec:
   driftDetection:
     mode: enabled
   interval: 5m
-  chart:
-    spec:
-      chart: 'nginx-gateway-fabric'
-      version: '1.4.0'
-      sourceRef:
-        kind: OCIRepository
-        name: nginx-gw
-        namespace: nginx-gw
-      interval: 1m
-  releaseName: "ngf"
+  chartRef:
+    kind: OCIRepository
+    name: nginx-gw
+    namespace: nginx-gw
   valuesFrom:
     - kind: ConfigMap
       name: nginx-gwvalues
