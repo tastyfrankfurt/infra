@@ -1,0 +1,8 @@
+nginx:
+  usage:
+    clusterName: jupiter.hell.local
+tolerations:
+  - key: "node-role.kubernetes.io"
+    value: worker
+    operator: Equal
+    effect: NoSchedule
