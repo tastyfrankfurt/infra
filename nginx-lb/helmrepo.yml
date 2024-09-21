@@ -1,10 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
-kind: OCIRepository
+kind: HelmRepository
 metadata:
   namespace: ingress-nginx
   name: ingress-nginx
 spec:
   interval: 5m
   url: https://kubernetes.github.io/ingress-nginx
-  ref:
-    tag: v1.4.0
