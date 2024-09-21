@@ -9,7 +9,8 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: 'nginx-gw'
+      chart: 'nginx-gateway-fabric'
+      version: '1.4.0'
       sourceRef:
         kind: OCIRepository
         name: nginx-gw
