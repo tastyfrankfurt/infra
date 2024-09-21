@@ -13,5 +13,5 @@ spec:
     namespace: nginx-gw
   valuesFrom:
     - kind: ConfigMap
-      name: nginx-gwvalues
+      name: nginx-gw-values
       
