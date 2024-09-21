@@ -4,6 +4,8 @@ metadata:
   namespace: nginx-gw
   name: nginx-gw
 spec:
+  dependsOn:
+  - name: nginx-crds
   driftDetection:
     mode: enabled
   interval: 5m
