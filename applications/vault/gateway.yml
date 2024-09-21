@@ -1,0 +1,25 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: vault
+  annotations:
+    cert-manager.io/issuer: "vault-issuer"
+    cert-manager.io/common-name: "vault"
+    cert-manager.io/private-key-algorithm: "ECDSA"
+    cert-manager.io/private-key-size: "521"
+    cert-manager.io/duration: "216h"
+spec:
+  gatewayClassName: vault
+  listeners:
+    - name: http
+      hostname: vault.hell.local
+      port: 443
+      protocol: HTTPS
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        hostname: vault.hell.local
+        mode: Terminate
+        certificateRefs:
+          - name: vault-tls
