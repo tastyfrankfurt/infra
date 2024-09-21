@@ -6,3 +6,5 @@ tolerations:
     value: worker
     operator: Equal
     effect: NoSchedule
+nginxGateway:
+  replicaCount: 3
