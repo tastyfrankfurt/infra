@@ -21,6 +21,6 @@ metadata:
   namespace: nginx-gw
 spec:
   interval: 5m
-  url: https://github.com/nginxinc/nginx-gateway-fabric/config/crd/gateway-api/standard
+  url: https://github.com/nginxinc/nginx-gateway-fabric/tree/main/config/crd
   ref:
-    branch: master
+    tag: v1.4.0
