@@ -21,6 +21,6 @@ metadata:
   namespace: nginx-gw
 spec:
   interval: 5m
-  url: https://github.com/nginxinc/nginx-gateway-fabric
+  url: https://github.com/nginxinc/nginx-gateway-fabric.git
   ref:
     tag: v1.4.0
