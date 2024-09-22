@@ -36,8 +36,7 @@ spec:
         certificateRefs:
           - name: kuard
     - name: https-m
-      hostname: metrics.hell.local
-      port: 443
+      port: 10443
       protocol: TCP
       allowedRoutes:
         namespaces:
