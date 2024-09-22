@@ -27,7 +27,7 @@ spec:
               kind: Deployment
               name: metrics-metrics-server
             patch: |-
-              - op: add
+              - op: replace
                 value: 
                   - "--secure-port=0"
                   - "--cert-dir=/tmp"
