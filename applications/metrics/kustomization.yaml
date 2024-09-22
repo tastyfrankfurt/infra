@@ -4,7 +4,7 @@ resources:
 - helmrelease.yml
 - helmrepo.yml
 - ns.yml
-- ingress.yml
+- gateway.yml
 - issuer.yml
 configMapGenerator:
 - name: metrics-values
