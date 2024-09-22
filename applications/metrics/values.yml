@@ -6,7 +6,6 @@ tolerations:
     effect: NoSchedule
 apiService:
   insecureSkipTLSVerify: true
-containerPort: 0
 #defaultArgs:
 #  - --cert-dir=/tmp
 #  - --secure-port=0
