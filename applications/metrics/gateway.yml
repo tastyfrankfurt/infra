@@ -3,7 +3,8 @@ apiVersion: gateway.networking.k8s.io/v1alpha2
 kind: TCPRoute
 metadata:
   name: metrics
-  namespace: metricsspec:
+  namespace: metrics
+spec:
   parentRefs:
   - name: vault
     namespace: vault
