@@ -49,6 +49,24 @@ spec:
         mode: Terminate
         certificateRefs:
           - name: kuard
+    - name: http-m
+      hostname: metrics.hell.local
+      protocol: HTTP
+      port: 80
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https-m
+      hostname: metrics.hell.local
+      port: 443
+      protocol: HTTPS
+      allowedRoutes:
+        namespaces:
+          from: All
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: metrics-tls
 ---
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
