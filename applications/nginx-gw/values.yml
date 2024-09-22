@@ -7,3 +7,4 @@ tolerations:
     effect: "NoSchedule"
 nginxGateway:
   replicaCount: 3
+  gwAPIExperimentalFeatures: true
