@@ -1,6 +1,6 @@
 ---
 apiVersion: gateway.networking.k8s.io/v1alpha2
-kind: TCPRoute
+kind: TLSRoute
 metadata:
   name: metrics
   namespace: metrics
@@ -9,6 +9,8 @@ spec:
   - name: vault
     namespace: vault
     sectionName: https-m
+  hostnames:
+  - "metrics.hell.local"
   rules:
   - backendRefs:
     - name: metrics-metrics-server

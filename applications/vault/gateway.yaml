@@ -36,13 +36,16 @@ spec:
         certificateRefs:
           - name: kuard
     - name: https-m
-      port: 10443
-      protocol: TCP
+      port: 443
+      hostname: "metrics.hell.local"
+      protocol: TLS
       allowedRoutes:
         namespaces:
           from: All
         kinds:
-        - kind: TCPRoute
+        - kind: TLSRoute
+      tls:
+        mode: Passthrough
 ---
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
