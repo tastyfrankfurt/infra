@@ -61,6 +61,12 @@ spec:
     privateKeySecretRef:
       name: vault-acme-key
     solvers:
-    - http01:
-        ingress:
-          ingressClassName: nginx
+      - http01:
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: vault
+                namespace: vault
+                kind: Gateway    
+    #- http01:
+    #    ingress:
+    #      ingressClassName: nginx
