@@ -9,7 +9,7 @@ metadata:
     cert-manager.io/private-key-size: "521"
     cert-manager.io/duration: "216h"
 spec:
-  gatewayClassName: vault
+  gatewayClassName: nginx
   listeners:
     - name: http
       hostname: vault.hell.local
