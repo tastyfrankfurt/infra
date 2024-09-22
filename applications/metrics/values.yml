@@ -1,4 +1,4 @@
-
+---
 tolerations:
   - key: "node-role.kubernetes.io"
     value: worker
@@ -6,6 +6,7 @@ tolerations:
     effect: NoSchedule
 apiService:
   insecureSkipTLSVerify: true
+defaultArgs:
   - --cert-dir=/tmp
   - --secure-port=0
   - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
