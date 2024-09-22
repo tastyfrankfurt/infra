@@ -1,22 +1,15 @@
 ---
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
+apiVersion: gateway.networking.k8s.io/v1alpha2
+kind: TCPRoute
 metadata:
   name: metrics
-  namespace: metrics
-spec:
+  namespace: metricsspec:
   parentRefs:
   - name: vault
     namespace: vault
     sectionName: https-m
-  hostnames:
-  - "metrics.hell.local"
   rules:
-  - matches:
-    - path:
-        type: PathPrefix
-        value: /
-    backendRefs:
+  - backendRefs:
     - name: metrics-metrics-server
       namespace: metrics
       port: 443
